@@ -98,7 +98,7 @@ ggscatter(beijingData, x="PM2.5", y="PM10",
           add.params = list(color="blue", fill="gray"),
           conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson",
-          xlab = "PM2.5 Concentration(ug/m³)", ylab = "PM10 Concentration(ug/m³)",
+          xlab = "PM2.5 Concentration(ug/mÂ³)", ylab = "PM10 Concentration(ug/mÂ³)",
           )
 
 
@@ -109,7 +109,7 @@ ggscatter(beijingData, x="PM2.5", y="NO2",
           add.params = list(color="blue", fill="gray"),
           conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson",
-          xlab = "PM2.5 Concentration(ug/m³)", ylab = "NO2 Concentration(ug/m³)",
+          xlab = "PM2.5 Concentration(ug/mÂ³)", ylab = "NO2 Concentration(ug/mÂ³)",
 )
 
 ggscatter(beijingData, x="PM2.5", y="CO",
@@ -118,7 +118,7 @@ ggscatter(beijingData, x="PM2.5", y="CO",
           add.params = list(color="blue", fill="gray"),
           conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson",
-          xlab = "PM2.5 Concentration(ug/m³)", ylab = "CO Concentration(ug/m³)",
+          xlab = "PM2.5 Concentration(ug/mÂ³)", ylab = "CO Concentration(ug/mÂ³)",
 )
 
 #PM10 x Toxic Gases
@@ -128,7 +128,7 @@ ggscatter(beijingData, x="PM10", y="NO2",
           add.params = list(color="blue", fill="gray"),
           conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson",
-          xlab = "PM2.5 Concentration(ug/m³)", ylab = "NO2 Concentration(ug/m³)",
+          xlab = "PM2.5 Concentration(ug/mÂ³)", ylab = "NO2 Concentration(ug/mÂ³)",
 )
 
 ggscatter(beijingData, x="PM10", y="CO",
@@ -137,7 +137,7 @@ ggscatter(beijingData, x="PM10", y="CO",
           add.params = list(color="blue", fill="gray"),
           conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson",
-          xlab = "PM2.5 Concentration(ug/m³)", ylab = "CO Concentration(ug/m³)",
+          xlab = "PM2.5 Concentration(ug/mÂ³)", ylab = "CO Concentration(ug/mÂ³)",
 )
 
 ggscatter(filter(beijingData, beijingData$SO2<200), x="SO2", y="PM2.5", conf.int = TRUE,
@@ -164,7 +164,7 @@ ggscatter(filter(beijingData, beijingData$O3<450), x="O3", y="PM2.5", conf.int =
 ggscatter(filter(beijingData, beijingData$O3<450), x="O3", y="PM10", conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson")
 
-#PM x Temperatura e Pressão
+#PM x Temperatura e PressÃ£o
 ggscatter(beijingData, x="TEMP", y="PM2.5", conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson")
 
@@ -183,7 +183,7 @@ ggscatter(beijingData, x="DEWP", y="PM2.5", conf.int = TRUE,
 
 ggscatter(beijingData, x="DEWP", y="PM10", conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson")
-#PM x Precipitação
+#PM x PrecipitaÃ§Ã£o
 ggscatter(filter(beijingData, beijingData$RAIN>0), x="RAIN", y="PM2.5", conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson")
 
@@ -196,7 +196,7 @@ ggscatter(filter(beijingData, beijingData$WSPM<10), x="WSPM", y="PM2.5", conf.in
 ggscatter(filter(beijingData, beijingData$WSPM<10), x="WSPM", y="PM10", conf.int = TRUE,
           cor.coef = TRUE, cor.method = "pearson")
 
-#AQI x Direção do Vento
+#AQI x DireÃ§Ã£o do Vento
 ggplot(data = beijingData, mapping = aes(x = AQI10, y=..prop..,group=1)) + 
   geom_bar(position = "identity") +
   facet_wrap(~wd)
@@ -205,11 +205,11 @@ ggplot(data = beijingData, mapping = aes(x = AQI25, y=..prop..,group=1)) +
   geom_bar(position = "identity") +
   facet_wrap(~wd)
 
-#Direção do Vento Predominante 
+#DireÃ§Ã£o do Vento Predominante 
 ggplot(data = beijingData, mapping = aes(x = wd)) + 
   geom_bar(position = 'identity')
 
-#Direção do Vento Predominante a cada mês
+#DireÃ§Ã£o do Vento Predominante a cada mÃªs
 ggplot(data = beijingData, mapping = aes(x = wd)) + 
   geom_bar(position = 'identity') +
   facet_wrap(~month)
@@ -250,7 +250,7 @@ ggplot(data = beijingData)+
   geom_bar(mapping = aes(x=AQI10, y=..prop..,group=1))+
   facet_wrap(~station, nrow=3)
 
-#AQI x Mês
+#AQI x MÃªs
 ggplot(data = beijingData)+
   geom_bar(mapping = aes(x=AQI10, y=..prop..,group=1))+
   facet_wrap(~month, nrow=3)
@@ -259,7 +259,7 @@ ggplot(data = beijingData)+
   geom_bar(mapping = aes(x=AQI25, y=..prop..,group=1))+
   facet_wrap(~month, nrow=3)
 
-#Temperatura x Mês
+#Temperatura x MÃªs
 ggplot(data = beijingData) + 
   stat_summary(
     mapping = aes(x = month, y = TEMP),
